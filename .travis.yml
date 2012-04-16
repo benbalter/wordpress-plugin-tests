@@ -10,7 +10,7 @@ env:
 # - WP_VERSION=3.2.1
 
 before_script:
-  - wget FOO
+  - wget https://raw.github.com/benbalter/wordpress-plugin-tests/setup/setup.sh
   - ./setup.sh
   
 script: php wp-test.php -d

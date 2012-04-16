@@ -11,6 +11,6 @@ env:
 
 before_script:
   - wget https://raw.github.com/benbalter/wordpress-plugin-tests/setup/setup.sh
-  - ./setup.sh
+  - sh setup.sh
   
 script: php wp-test.php -d

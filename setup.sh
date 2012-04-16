@@ -24,9 +24,11 @@ tar --strip-components=1 -zxmf wordpress.tar.gz -C wordpress #note: strip compon
 git svn clone -$(svn log -q --limit 1 http://svn.automattic.com/wordpress-tests/ | awk '/^r/{print $1}') http://svn.automattic.com/wordpress-tests/ --ignore-paths="^wp-config-sample.php|^wp-testcase|^wp-testdata/[^/]+/" ./ 
 
 #put various components in proper folders
-mv -f plugin/tests/wp-config.php ./wp-config.php
 mv -f plugin/tests ./wp-testcase
 mv -f plugin wordpress/wp-content/mu-plugins
+
+#grab wp-config
+wget https://raw.github.com/benbalter/wordpress-plugin-tests/setup/wp-config.php
 
 #patch wp-test.php to return the proper error code
 sed 's/?>/if ( intval( $result->failureCount() ) || intval( $result->errorCount() ) ) exit (1);/' wp-test.php > wp-test-temp.php

@@ -12,5 +12,5 @@ define ('WPLANG', '');
 
 //prevent errors when running via CLI
 $_SERVER['SERVER_PROTOCOL'] = 'HTTP/1.1';
-$_SERVER['HTTP_HOST'] = 'example.org';
+$_SERVER['HTTP_HOST'] = 'example.org/';
 $PHP_SELF = $GLOBALS['PHP_SELF'] = $_SERVER['PHP_SELF'] = '/index.php';

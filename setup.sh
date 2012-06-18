@@ -24,4 +24,4 @@ cd ./tests
 
 #grab unittsets-config and move into framework folder
 wget https://raw.github.com/benbalter/wordpress-plugin-tests/setup/unittests-config.php
-mv unittsets-config.php framework/unittests-config.php
+mv unittests-config.php framework/unittests-config.php

@@ -1,7 +1,7 @@
 <?php
 /* Path to the WordPress codebase you'd like to test. Add a backslash in the end. */
 
-define( 'ABSPATH', dirname( __FILE__ ) . '/wp/' );
+define( 'ABSPATH', dirname( dirname( dirname( __FILE__ ) ) ) . '/wp/' );
 
 define( 'DB_NAME', 'wordpress_test' );
 define( 'DB_USER', 'root' );

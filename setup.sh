@@ -9,6 +9,7 @@
 mysql -e 'create database wordpress_test;' -uroot   
 
 # Normalize plugin folder name
+plugin_slug=$( echo "${PWD##*/}" | tr -s  '[:upper:]'  '[:lower:]' )
 mkdir ../plugin   
 mv * ../plugin
 cd ..
@@ -20,6 +21,7 @@ tar --strip-components=1 -zxmf wordpress.tar.gz -C wp #note: strip components re
 
 #put various components in proper folders
 mv -f plugin/tests ./tests
+mv -f plugin wp/wp-content/$plugin_slug
 cd ./tests
 
 #grab unittsets-config and move into framework folder

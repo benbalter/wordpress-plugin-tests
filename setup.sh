@@ -24,6 +24,12 @@ mv -f plugin/tests ./tests
 mv -f plugin wp/wp-content/plugins/$plugin_slug
 cd ./tests
 
+if [ ! -d "wordpress-tests" ]; then
+	wget -O wordpress-tests.tar.gz https://github.com/nb/wordpress-tests/tarball/master
+	mkdir wordpress-tests
+	tar --strip-components=1 -zxmf wordpress-tests.tar.gz -C wordpress-tests
+fi
+
 #grab unittsets-config and move into framework folder
 wget https://raw.github.com/johnpbloch/wordpress-plugin-tests/phpunit-setup/unittests-config.php
 mv unittests-config.php wordpress-tests/unittests-config.php

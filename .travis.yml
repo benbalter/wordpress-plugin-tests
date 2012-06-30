@@ -17,6 +17,6 @@ env:
 before_script:
   - wget https://raw.github.com/johnpbloch/wordpress-plugin-tests/phpunit-setup/setup.sh
   - sh setup.sh
-  - cd ..
+  - cd ../tests
     
-script: phpunit
+script: phpunit All

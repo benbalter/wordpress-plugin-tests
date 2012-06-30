@@ -21,9 +21,9 @@ tar --strip-components=1 -zxmf wordpress.tar.gz -C wp #note: strip components re
 
 #put various components in proper folders
 mv -f plugin/tests ./tests
-mv -f plugin wp/wp-content/$plugin_slug
+mv -f plugin wp/wp-content/plugins/$plugin_slug
 cd ./tests
 
 #grab unittsets-config and move into framework folder
-wget https://raw.github.com/benbalter/wordpress-plugin-tests/setup/unittests-config.php
-mv unittests-config.php framework/unittests-config.php
+wget https://raw.github.com/johnpbloch/wordpress-plugin-tests/phpunit-setup/unittests-config.php
+mv unittests-config.php wordpress-tests/unittests-config.php

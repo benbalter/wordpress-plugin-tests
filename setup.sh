@@ -24,6 +24,8 @@ mv -f plugin/tests ./tests
 mv -f plugin wp/wp-content/plugins/$plugin_slug
 cd ./tests
 
+#you can include wordpress-tests as a git submodule here and Travis CI will init it,
+#if it does not exist, we'll just download it on the fly now
 if [ ! -d "./wordpress-tests" ]; then
 	wget -O wordpress-tests.tar.gz https://github.com/nb/wordpress-tests/tarball/master
 	mkdir wordpress-tests

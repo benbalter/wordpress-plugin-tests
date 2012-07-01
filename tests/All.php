@@ -23,7 +23,7 @@ for( $depth = 0; $depth <= 3; $depth++ ) {
 	}	
 }
 
-class all {
+class All {
     public static function suite() {
         $suite = new PHPUnit_Framework_TestSuite();
 		foreach( get_declared_classes() as $class ) {

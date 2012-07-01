@@ -31,5 +31,5 @@ if [ ! -d "./wordpress-tests" ]; then
 fi
 
 #grab unittsets-config and move into framework folder
-wget https://raw.github.com/johnpbloch/wordpress-plugin-tests/phpunit-setup/unittests-config.php
+wget https://raw.github.com/benbalter/wordpress-plugin-tests/setup/unittests-config.php
 mv unittests-config.php wordpress-tests/unittests-config.php

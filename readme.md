@@ -30,6 +30,15 @@ The Tests
 * Each test file should contain a single class named in the form of `WP_Test_{name_of_test}` that extends `WP_UnitTestCase`. 
 * Example Tests: [WP Document Revisions](https://github.com/benbalter/WP-Document-Revisions/tree/master/tests)
 
+Note
+----
+There's a seperate branch [`setup.sh`](https://github.com/benbalter/wordpress-plugin-tests/tree/setup) which contains setup and config files which are pulled down on the fly when testing
+
+How to Contribute
+-----------------
+1. Fork the project to your account, make changes, and submit a pull request
+1. Integrate with your plugin and open issues / feature requests as you see fit
+
 Changelog
 ---------
 * 4/16/2012 - Initial commit of skelton based off of (legacy) core testing framework
@@ -37,7 +46,8 @@ Changelog
 
 Roadmap/todo
 ------------
-- Ability to integrate with plugins as a submodule to allow for updates
+* Ability to integrate with plugins as a submodule to allow for update
+* Ability to customize configuration as pulled down from `setup.sh`
 
 Contributors
 ------------

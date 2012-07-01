@@ -24,7 +24,7 @@ mv -f plugin/tests ./tests
 mv -f plugin wp/wp-content/plugins/$plugin_slug
 cd ./tests
 
-if [ ! -d "wordpress-tests" ]; then
+if [ ! -d "./wordpress-tests" ]; then
 	wget -O wordpress-tests.tar.gz https://github.com/nb/wordpress-tests/tarball/master
 	mkdir wordpress-tests
 	tar --strip-components=1 -zxmf wordpress-tests.tar.gz -C wordpress-tests

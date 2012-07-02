@@ -6,7 +6,7 @@
 class WP_Test_WordPress_Plugin_Tests extends WP_UnitTestCase {
 	
 	/**
-	 * Run a simple test to ensure that WordPress is installed the tests are running
+	 * Run a simple test to ensure that the tests are running
 	 */
 	 function test_tests() {
 		 
@@ -15,7 +15,7 @@ class WP_Test_WordPress_Plugin_Tests extends WP_UnitTestCase {
 	 }
 	
 	/**
-	 * Verify  and is the version that we requested
+	 * Verify that WordPress is installed and is the version that we requested
 	 */
 	function test_wp_version() {
 		

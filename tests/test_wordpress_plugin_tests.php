@@ -1,6 +1,6 @@
 <?php
 /**
- * Tests to test that that testing framwork is testing tests. Meta, huh?
+ * Tests to test that that testing framework is testing tests. Meta, huh?
  * @package wordpress-plugins-tests
  */
 class WP_Test_WordPress_Plugin_Tests extends WP_UnitTestCase {

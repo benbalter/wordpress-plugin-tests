@@ -19,7 +19,7 @@ class WP_Test_WordPress_Plugin_Tests extends WP_UnitTestCase {
 	 */
 	function test_wp_version() {
 		
-		if ( !get_env( 'TRAVIS_PHP_VERSION' ) )
+		if ( !getenv( 'TRAVIS_PHP_VERSION' ) )
 			$this->markTestSkipped( 'Not running on Travis CI' );
 			
 		$this->assertEquals( get_bloginfo( 'version' ), getenv( 'WP_VERSION' ) );

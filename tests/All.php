@@ -14,23 +14,21 @@
 require_once 'PHPUnit/Autoload.php';
 
 $tests_dir = dirname( __FILE__ );
-$old_cwd = getcwd();
+$old_cwd   = getcwd();
 chdir( $tests_dir );
 
-for( $depth = 0; $depth <= 3; $depth++ ) {
-	foreach( glob( str_repeat( 'tests[_-]*/', $depth ) . 'test_*.php' ) as $test_file ) {
-		include_once $test_file;
-	}	
+for ( $depth = 0; $depth <= 3; $depth++ ) {
+    foreach ( glob( str_repeat( 'tests[_-]*/', $depth ) . 'test_*.php' ) as $test_file ) {
+        include_once $test_file;
+    }
 }
 
 class All {
     public static function suite() {
         $suite = new PHPUnit_Framework_TestSuite();
-		foreach( get_declared_classes() as $class ) {
-			if ( preg_match( '/^WP_Test_/', $class ) ) {
-				$suite->addTestSuite( $class );
-			}
-		}
+        foreach ( preg_grep( '/^WP_Test_/', get_declared_classes() ) as $class ) {
+            $suite->addTestSuite( $class );
+        }
         return $suite;
     }
 }

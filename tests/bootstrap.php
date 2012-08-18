@@ -16,4 +16,3 @@ $GLOBALS['wp_tests_options'] = array(
 );
 
 require dirname( __FILE__ ) . '/wordpress-tests/init.php';
-

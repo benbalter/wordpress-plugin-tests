@@ -26,10 +26,8 @@ for ( $depth = 0; $depth <= 3; $depth++ ) {
 class All {
     public static function suite() {
         $suite = new PHPUnit_Framework_TestSuite();
-		foreach ( get_declared_classes() as $class ) {
-			if ( preg_match( '/^WP_Test_/', $class ) ) {
-				$suite->addTestSuite( $class );
-			}
+		foreach ( preg_grep( '/^WP_Test_/', get_declared_classes() ) as $class ) {
+            $suite->addTestSuite( $class );
 		}
         return $suite;
     }

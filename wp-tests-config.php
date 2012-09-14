@@ -21,11 +21,6 @@ define( 'WP_TESTS_NETWORK_TITLE', 'Test Network' );
 define( 'WP_TESTS_SUBDOMAIN_INSTALL', true );
 $base = '/';
 
-define( 'WP_MEMORY_LIMIT', '64M' );
-
-/* Cron tries to make an HTTP request to the blog, which always fails, because tests are run in CLI mode only */
-define( 'DISABLE_WP_CRON', true );
-
 define( 'WP_ALLOW_MULTISITE', (bool) getenv( 'WP_MULTISITE' ) );
 
 if ( WP_ALLOW_MULTISITE ) {

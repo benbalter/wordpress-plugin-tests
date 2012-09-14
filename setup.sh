@@ -27,7 +27,7 @@ cd ./tests
 #you can include wordpress-tests as a git submodule here and Travis CI will init it,
 #if it does not exist, we'll just download it on the fly now
 if [ ! -d "./wordpress-tests" ]; then
-	svn co http://unit-test.svn.wordpress.org/trunk wordpress-tests
+	svn co --ignore-externals http://unit-tests.svn.wordpress.org/trunk/ wordpress-tests
 fi
 
 #grab unittsets-config and move into framework folder

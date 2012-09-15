@@ -5,31 +5,27 @@
 # Author: Benjamin J. Balter ( ben@balter.com | ben.balter.com )
 # License: GPL3
 
-# Init Database
-mysql -e 'create database wordpress_test;' -uroot   
+export WP_CORE_DIR=/tmp/wordpress
+export WP_TESTS_DIR=/tmp/wordpress-tests
 
-# Normalize plugin folder name
-plugin_slug=$( echo "${PWD##*/}" | tr -s  '[:upper:]'  '[:lower:]' )
-mkdir ../plugin   
-mv * ../plugin
+# Init database
+mysql -e 'CREATE DATABASE wordpress_test;' -uroot
+
+# Grab specified version of WordPress from github
+wget -nv -O /tmp/wordpress.tar.gz https://github.com/WordPress/WordPress/tarball/$WP_VERSION
+mkdir -p $WP_CORE_DIR
+tar --strip-components=1 -zxmf /tmp/wordpress.tar.gz -C $WP_CORE_DIR
+
+# Grab testing framework and config file
+svn co --quiet --ignore-externals http://unit-tests.svn.wordpress.org/trunk/ $WP_TESTS_DIR
+
+wget -nv -O $WP_TESTS_DIR/wp-tests-config.php https://raw.github.com/scribu/wordpress-plugin-tests/setup/wp-tests-config.php
+
+# Put various components in proper folders
+plugin_slug=$(basename $(pwd))
+plugin_dir=$WP_CORE_DIR/wp-content/plugins/$plugin_slug
+
 cd ..
+mv $plugin_slug $plugin_dir
 
-#grab specified version of WordPress from Git and unzip
-wget -O wordpress.tar.gz https://github.com/WordPress/WordPress/tarball/$WP_VERSION
-mkdir -p wp
-tar --strip-components=1 -zxmf wordpress.tar.gz -C wp #note: strip components removes the WordPress-Wordpress-### subdirectory
-
-#put various components in proper folders
-mv -f plugin/tests ./tests
-mv -f plugin wp/wp-content/plugins/$plugin_slug
-cd ./tests
-
-#you can include wordpress-tests as a git submodule here and Travis CI will init it,
-#if it does not exist, we'll just download it on the fly now
-if [ ! -d "./wordpress-tests" ]; then
-	svn co --ignore-externals http://unit-tests.svn.wordpress.org/trunk/ wordpress-tests
-fi
-
-#grab unittsets-config and move into framework folder
-wget https://raw.github.com/benbalter/wordpress-plugin-tests/setup/wp-tests-config.php
-mv wp-tests-config.php wordpress-tests/wp-tests-config.php
+cd $plugin_dir/tests

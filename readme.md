@@ -34,7 +34,7 @@ The Tests
 
 Note
 ----
-There's a seperate branch [`setup.sh`](https://github.com/benbalter/wordpress-plugin-tests/tree/setup) which contains setup and config files which are pulled down on the fly when testing
+There's a separate branch [`setup.sh`](https://github.com/benbalter/wordpress-plugin-tests/tree/setup) which contains setup and config files which are pulled down on the fly when testing
 
 Alternate Setup
 ---------------

@@ -25,20 +25,16 @@ How to integrate with your plugin
 
 Running the tests locally
 ----------------------------------
-1. Check out a copy of the WP tests framework: 
+First, set up the WP testing framework: http://make.wordpress.org/core/handbook/automated-testing/#installation
 
-```bash
-svn co --ignore-externals http://unit-tests.svn.wordpress.org/trunk/ ~/wordpress-tests
-```
-
-2. Add the environment variables to your `.bashrc` profile:
+Then, add the environment variables to your `.bashrc` file:
 
 ```bash
 export WP_TEST_DIR=~/wordpress-tests
 export WP_CORE_DIR=~/path/to/wordpress-core
 ```
 
-3. Run the tests
+Finally, run the tests:
 
 ```bash
 cd /path/to/your-plugin/tests

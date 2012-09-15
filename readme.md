@@ -30,7 +30,7 @@ First, set up the WP testing framework: http://make.wordpress.org/core/handbook/
 Then, add the environment variables to your `.bashrc` file:
 
 ```bash
-export WP_TEST_DIR=~/wordpress-tests
+export WP_TESTS_DIR=~/wordpress-tests
 export WP_CORE_DIR=~/path/to/wordpress-core
 ```
 

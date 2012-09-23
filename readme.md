@@ -59,4 +59,4 @@ Roadmap/todo
 
 Contributors
 ------------
-Special thanks to @johnpbloch for doing much of the legwork on the rewrite.
+Special thanks to @johnpbloch and @scribu for doing much of the legwork on the rewrite.

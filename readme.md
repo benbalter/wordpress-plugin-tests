@@ -22,9 +22,26 @@ How to integrate with your plugin
 1. Place [`.travis.yml`](https://github.com/benbalter/wordpress-plugin-tests/blob/master/.travis.yml) file in your plugin's root folder (you may want to [customize your build settings](http://about.travis-ci.org/docs/user/build-configuration/) here)
 2. Create a subfolder of your plugin called `tests/` and copy over the [`all.php`](https://github.com/benbalter/wordpress-plugin-tests/blob/master/tests/All.php), [`bootstrap.php`](https://github.com/benbalter/wordpress-plugin-tests/blob/master/tests/bootstrap.php), and [`phpunit.xml`](https://github.com/benbalter/wordpress-plugin-tests/blob/master/tests/phpunit.xml) files from this repo's [`test/`](https://github.com/benbalter/wordpress-plugin-tests/tree/master/tests) folder
 3. Customize the newly coppied [`/tests/bootstrap.php`](https://github.com/benbalter/wordpress-plugin-tests/blob/master/tests/bootstrap.php) with the path to your plugin file 
-4. If you want to be able to test locally, create an svn checkout of the testing framework in the the `tests/` folder by running the command `svn co --ignore-externals http://unit-tests.svn.wordpress.org/trunk tests/wordpress-tests` from your plugin's root directory. This folder will be ignored by git. (*optional*)
-5. [Activate Travis CI](http://travis-ci.org/profile) for your plugin
-6. Add tests to the `tests/` folder following the instructions below
+4. [Activate Travis CI](http://travis-ci.org/profile) for your plugin
+5. Add tests to the `tests/` folder following the instructions below
+
+Running the tests locally
+----------------------------------
+First, set up the WP testing framework: http://make.wordpress.org/core/handbook/automated-testing/#installation
+
+Then, add the environment variables to your `.bashrc` file:
+
+```bash
+export WP_TESTS_DIR=~/wordpress-tests
+export WP_CORE_DIR=~/path/to/wordpress-core
+```
+
+Finally, run the tests:
+
+```bash
+cd /path/to/your-plugin/tests
+phpunit
+```
 
 The Tests
 ---------

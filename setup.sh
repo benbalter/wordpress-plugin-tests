@@ -26,7 +26,9 @@ wget -nv -O $WP_TESTS_DIR/wp-tests-config.php https://raw.github.com/benbalter/w
 plugin_slug=$(basename $(pwd))
 plugin_dir=$WP_CORE_DIR/wp-content/plugins/$plugin_slug
 
+#move plugin itself into place
 cd ..
 mv $plugin_slug $plugin_dir
 
+#put shell in tests folder
 cd $plugin_dir/tests

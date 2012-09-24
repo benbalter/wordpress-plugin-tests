@@ -53,10 +53,6 @@ Note
 ----
 There's a separate branch [`setup.sh`](https://github.com/benbalter/wordpress-plugin-tests/tree/setup) which contains setup and config files which are pulled down on the fly when testing
 
-Alternate Setup
----------------
-If you need to unit test more than one WordPress plugin, [@scribu's alternate setup method](https://github.com/benbalter/wordpress-plugin-tests/issues/9#issuecomment-8567084) may be attractive.
-
 How to Contribute
 -----------------
 1. Fork the project to your account, make changes, and submit a pull request

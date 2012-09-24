@@ -16,9 +16,10 @@ wget -nv -O /tmp/wordpress.tar.gz https://github.com/WordPress/WordPress/tarball
 mkdir -p $WP_CORE_DIR
 tar --strip-components=1 -zxmf /tmp/wordpress.tar.gz -C $WP_CORE_DIR
 
-# Grab testing framework and config file
+# Grab testing framework
 svn co --quiet --ignore-externals http://unit-tests.svn.wordpress.org/trunk/ $WP_TESTS_DIR
 
+# Grab Travis-CI specific config file
 wget -nv -O $WP_TESTS_DIR/wp-tests-config.php https://raw.github.com/benbalter/wordpress-plugin-tests/setup/wp-tests-config.php
 
 # Put various components in proper folders

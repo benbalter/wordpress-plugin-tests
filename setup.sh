@@ -20,5 +20,11 @@ mv $plugin_slug $plugin_dir
 # Grab Travis-CI specific config file
 wget -nv -O $plugin_dir/tests/wp-tests-config.php https://raw.github.com/benbalter/wordpress-plugin-tests/setup/wp-tests-config.php
 
+# Make sure wp-tests-lib is available
+if [ ! -d $plugin_dir/tests/lib ]
+then
+	git clone git://github.com/scribu/wp-tests-lib.git $plugin_dir/tests/lib
+fi
+
 # prepare shell for phpunit call
 cd $plugin_dir/tests

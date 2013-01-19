@@ -30,3 +30,5 @@ fi
 
 # prepare shell for phpunit call
 cd $plugin_dir/tests
+
+set +x

@@ -1,7 +1,7 @@
 WordPress Plugin Tests
 ======================
 
-A Travis CI compatible unit testing architecture for WordPress plugins that utilizes [WordPress core's official unit-testing framework](http://unit-tests.trac.wordpress.org/browser/trunk) and [PHPUnit](https://github.com/sebastianbergmann/phpunit/)
+A Travis CI compatible unit testing architecture for WordPress plugins that use [WordPress core's official unit-testing framework](http://unit-tests.trac.wordpress.org/browser/trunk/includes) and [PHPUnit](https://github.com/sebastianbergmann/phpunit/)
 
 [![Build Status](https://secure.travis-ci.org/benbalter/wordpress-plugin-tests.png)](http://travis-ci.org/benbalter/wordpress-plugin-tests)
 
@@ -9,7 +9,6 @@ How it Works
 ------------
 * Automatically fires after every commit (or you can specificy certain branches)
 * Downloads and sets up multiple versions of WordPress and PHP (as many as you want to specify)
-* Downloads the [WordPress unit testing framework](http://unit-tests.trac.wordpress.org/browser/trunk) if it doesn't already exist in the `tests/wordpress-tests` directory as a submodule
 * Runs all the tests and e-mails you on failure
 
 Assumptions
@@ -22,8 +21,9 @@ How to integrate with your plugin
 1. Place [`.travis.yml`](https://github.com/benbalter/wordpress-plugin-tests/blob/master/.travis.yml) file in your plugin's root folder (you may want to [customize your build settings](http://about.travis-ci.org/docs/user/build-configuration/) here)
 2. Create a subfolder of your plugin called `tests/` and copy over the [`bootstrap.php`](https://github.com/benbalter/wordpress-plugin-tests/blob/master/tests/bootstrap.php) and [`phpunit.xml`](https://github.com/benbalter/wordpress-plugin-tests/blob/master/tests/phpunit.xml) files from this repo's [`test/`](https://github.com/benbalter/wordpress-plugin-tests/tree/master/tests) folder
 3. Customize the newly coppied [`/tests/bootstrap.php`](https://github.com/benbalter/wordpress-plugin-tests/blob/master/tests/bootstrap.php) with the path to your plugin file 
-4. [Activate Travis CI](http://travis-ci.org/profile) for your plugin
-5. Add tests to the `tests/` folder following the instructions below
+4. Set up the tests library as a [submodule](http://git-scm.com/book/en/Git-Tools-Submodules): `git submodule add git://github.com/scribu/wp-tests-lib.git tests/lib`
+5. [Activate Travis CI](http://travis-ci.org/profile) for your plugin
+6. Add tests to the `tests/` folder following the instructions below
 
 Running the tests locally
 ----------------------------------

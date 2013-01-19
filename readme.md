@@ -53,15 +53,10 @@ How to Contribute
 
 Changelog
 ---------
-* 9/15/2012 - Removed `wordpress-tests` submodule in favor of core's SVN
-* 4/16/2012 - Initial commit of skelton based off of (legacy) core testing framework
-* 6/30/2012 - Complete rewrite to rely on newer wordpress-tests framework and better PHPUnit integration
-
-Roadmap/todo
-------------
-* Include git-based core testing framework as submodule when there's an official git version
-* Ability to integrate with plugins as a submodule to allow for update
-* Ability to customize configuration as pulled down from `setup.sh`
+* 1/19/2013 - Mandate plugins have [wp-tests-lib](https://github.com/scribu/wp-tests-lib) as a submodule.
+* 9/15/2012 - Removed `wordpress-tests` submodule in favor of core's SVN.
+* 4/16/2012 - Initial commit of skelton based off of (legacy) core testing framework.
+* 6/30/2012 - Complete rewrite to rely on newer wordpress-tests framework and better PHPUnit integration.
 
 Contributors
 ------------

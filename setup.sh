@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -x
+
 export WP_CORE_DIR=/tmp/wordpress
 
 plugin_slug=$(basename $(pwd))

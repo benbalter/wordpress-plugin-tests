@@ -53,10 +53,10 @@ How to Contribute
 
 Changelog
 ---------
-* 1/19/2013 - Mandate plugins have [wp-tests-lib](https://github.com/scribu/wp-tests-lib) as a submodule.
-* 9/15/2012 - Removed `wordpress-tests` submodule in favor of core's SVN.
-* 4/16/2012 - Initial commit of skelton based off of (legacy) core testing framework.
-* 6/30/2012 - Complete rewrite to rely on newer wordpress-tests framework and better PHPUnit integration.
+* 2013-01-19 - Mandate plugins have [wp-tests-lib](https://github.com/scribu/wp-tests-lib) as a submodule.
+* 2012-09-15 - Removed `wordpress-tests` submodule in favor of core's SVN.
+* 2012-04-16 - Initial commit of skelton based off of (legacy) core testing framework.
+* 2012-06-30 - Complete rewrite to rely on newer wordpress-tests framework and better PHPUnit integration.
 
 Contributors
 ------------

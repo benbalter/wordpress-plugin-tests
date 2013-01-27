@@ -25,7 +25,7 @@ wget -nv -O $plugin_dir/tests/wp-tests-config.php https://raw.github.com/benbalt
 # Make sure wp-tests-lib is available
 if [ ! -d $plugin_dir/tests/lib ]
 then
-	git clone git://github.com/scribu/wp-tests-lib.git $plugin_dir/tests/lib
+	git clone --depth=1 git://github.com/scribu/wp-tests-lib.git $plugin_dir/tests/lib
 fi
 
 # prepare shell for phpunit call

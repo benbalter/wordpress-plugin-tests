@@ -32,7 +32,7 @@ All you need to do is set up a `wp-tests-config.php` file inside the `tests` dir
 Then, run the tests:
 
 ```bash
-cd /path/to/your-plugin/tests
+cd /path/to/your-plugin
 phpunit
 ```
 

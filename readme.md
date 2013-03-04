@@ -5,6 +5,8 @@ A Travis CI compatible unit testing architecture for WordPress plugins that use 
 
 [![Build Status](https://secure.travis-ci.org/benbalter/wordpress-plugin-tests.png)](http://travis-ci.org/benbalter/wordpress-plugin-tests)
 
+**Update**: Use [WP-CLI](http://wp-cli.org) to create all these files automatically. See <http://wp-cli.org/blog/plugin-unit-tests.html>
+
 How it Works
 ------------
 * Automatically fires after every commit (or you can specify certain branches)

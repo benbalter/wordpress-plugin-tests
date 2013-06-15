@@ -1,11 +1,17 @@
+DEPRECATED
+==========
+This way of setting up plugin unit tests is deprecated.
+
+Use the [wp scaffold plugin-tests](https://github.com/wp-cli/sample-plugin) command from [WP-CLI](http://wp-cli.org) to create all the needed files automatically.
+
+If you can't use WP-CLI, just copy the files from the [sample plugin](https://github.com/wp-cli/sample-plugin).
+
 WordPress Plugin Tests
 ======================
 
 A Travis CI compatible unit testing architecture for WordPress plugins that use [WordPress core's official unit-testing framework](http://unit-tests.trac.wordpress.org/browser/trunk/includes) and [PHPUnit](https://github.com/sebastianbergmann/phpunit/)
 
 [![Build Status](https://secure.travis-ci.org/benbalter/wordpress-plugin-tests.png)](http://travis-ci.org/benbalter/wordpress-plugin-tests)
-
-**Update**: Use [WP-CLI](http://wp-cli.org) to create all these files automatically. See <http://wp-cli.org/blog/plugin-unit-tests.html>
 
 How it Works
 ------------

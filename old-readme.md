@@ -30,7 +30,7 @@ Running the tests locally
 
 ```bash
 cd /path/to/your-plugin/
-svn co --quiet http://unit-tests.svn.wordpress.org/trunk/includes/ tests/lib
+svn co http://unit-tests.svn.wordpress.org/trunk/includes/ tests/lib
 ```
 
 2) Set up a `wp-tests-config.php` file inside the `tests` directory. ([sample](https://unit-tests.svn.wordpress.org/trunk/wp-tests-config-sample.php))

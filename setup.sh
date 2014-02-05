@@ -29,6 +29,6 @@ then
 fi
 
 # prepare shell for phpunit call
-cd $plugin_dir/tests
+cd $plugin_dir
 
 set +x
